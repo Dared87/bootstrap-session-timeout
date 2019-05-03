@@ -112,11 +112,11 @@
                 if ($('#session-timeout-dialog').length > 0 &&
                     $('#session-timeout-dialog').data('bs.modal')){
                     if(opt.hideModalOnAction){
-                        if($('#session-timeout-dialog').data('bs.modal').isShown) {
+                        if($('#session-timeout-dialog').data('bs.modal')._isShown) {
                             // http://stackoverflow.com/questions/11519660/twitter-bootstrap-modal-backdrop-doesnt-disappear
                             $('#session-timeout-dialog').modal('hide');
-                            $('body').removeClass('modal-open');
-                            $('div.modal-backdrop').remove();
+                            //$('body').removeClass('modal-open');
+                            //$('div.modal-backdrop').remove();
                         }
                         startSessionTimer();
                     }
